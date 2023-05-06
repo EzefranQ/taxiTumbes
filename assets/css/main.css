@@ -1,0 +1,432 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    font-family: 'Archivo';
+}
+
+
+/* General */
+
+ul{
+    list-style-type: none;
+    display: flex;
+}
+a{
+    text-decoration: none;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* Header */
+
+.header{
+    padding: 2rem 0;
+    width: 100%;
+    height: auto;
+}
+.logo{
+    width: 170px;
+    margin: 0 100px;
+}
+.desktop-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-mobile,
+.menu-list{
+    gap: 40px;
+    align-items: center;
+}
+.menu-mobile a,
+.menu-list a{
+    font-size: 17px;
+    font-weight: 600;
+    color: rgb(0, 0, 0, .5);
+    color: #000;
+
+    transition: .5s color;
+}
+.menu-mobile a:hover,
+.menu-list a:hover{
+    color: #E95E24;
+}
+
+
+
+
+
+.mobile-nav{
+    width: 100%;
+    padding: 0 2rem;
+    display: none;
+}
+
+.mobile-nav .logo{
+    margin: 0;
+}
+
+.open-close{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.menu-hamburguer{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.menu-hamburguer > div{
+    width: 23px;
+    height: 2px;
+    background: #000;
+}
+.mobile-nav .menu-list{
+    display: none;
+}
+.menu-mobile{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-nav{
+    display: none;
+}
+
+@media screen and (max-width: 1150px) {
+    .mobile-nav{
+        display: flex;
+        flex-direction: column;
+    }
+    .desktop-nav{
+        display: none;
+    }
+}
+
+
+/* 
+======================================
+taxi-section - Home
+======================================
+*/
+
+.header-taxi-sec{
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+    padding: 0 1rem;
+}
+.header-taxi-sec p{
+    font-size: 17px;
+}
+
+.taxi-section{
+    margin-top: 80px;
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+    'details1 slider details2'
+    'details1 slider details2';
+    justify-content: center;
+    gap: 50px;
+}
+
+.details-1{
+    grid-area: 'details1';
+}
+.details-2{
+    grid-area: 'details2';
+}
+.slider{
+    grid-area: 'slider';
+}
+
+
+
+.details{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 80px;
+}
+.item-detail{
+    display: flex;
+    gap: 5px;
+}
+.img-detail{
+    width: 35px;
+    height: 35px;
+    transform: translateY(-30px);
+}
+.text-detail h1{
+    font-size: 30px;
+    /* transform: translateX(-10px); */
+}
+.text-detail h1 span{
+    display: block;
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(0, 0, 0, .5);
+}
+
+
+
+.img-taxi{
+    width: 650px;
+    animation: taxiMove 1s;
+}
+
+@keyframes taxiMove {
+    0%{
+        transform: translateX(-60vw);
+    }
+    100%{
+        transform: translateX(-0px);
+    }
+}
+
+
+@media screen and (max-width: 1150px) {
+    .taxi-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .details{
+        flex-direction: row;
+    }
+    .img-detail{
+        transform: translateY(-0px);
+    }
+    .item-detail{
+        gap: 10px;
+    }
+    
+}
+
+@media screen and (max-width: 700px) {
+    .img-taxi{
+        width: 90%;
+    }
+    .slider{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .taxi-section{
+        padding: 0 1rem;
+    }
+    .item-detail{
+        gap: 5px;
+    }
+    @keyframes taxiMove {
+        0%{
+            transform: translateX(-80vw);
+        }
+        100%{
+            transform: translateX(-0px);
+        }
+    }
+}
+@media screen and (max-width: 570px) {
+    .item-detail{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 450px) {
+    .details{
+        flex-direction: column;
+        row-gap: 25px;
+    }
+}
+
+
+
+
+/* Contact footer line */
+
+.contact-line{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3rem;
+    align-items: center;
+}
+.number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.number h1 span{
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(0, 0, 0, .5);
+    margin-bottom: 5px;
+    transform: translateX(-8px);
+}
+.number h1{
+    transform: translateX(5px);
+}
+.number .icon{
+    width: 15px;
+}
+.icons-line{
+    display: flex;
+    gap: 20px;
+}
+.icons-line .icon{
+    width: 40px;
+}
+
+@media screen and (max-width: 600px) {
+    .contact-line{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .number{
+        flex-direction: column;
+    }
+    .number h1 span{
+        text-align: center;
+        transform: translateX(0px);
+    }
+    .number h1{
+        transform: translateX(0px);
+    }
+}
+
+
+
+
+/* Taxi fleet */
+.taxi-fleet{
+    margin-top: 100px;
+}
+.header-fleet{
+    text-align: center;
+}
+.header-fleet .sp-block{
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: rgb(0, 0, 0, .5);
+}
+.header-fleet h1{
+    font-size: 35px;
+    display: block;
+}
+
+.sp-color{
+    color: #E95E24;
+}
+
+
+
+
+/* Fleet */
+.flex-fleet{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.fleet-item{
+    margin-top: 80px;
+}
+.fleet-item h1{
+    font-size: 30px;
+}
+
+.header-item{
+    display: flex;
+    flex-direction: column;
+}
+.img-fleet{
+    width: 130px;
+    height: auto;
+}
+
+.price-item{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.flex-item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.price-item img{
+    width: 25px;
+    vertical-align: middle;
+}
+
+.detail-item{
+    list-style-type: circle;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+
+}
+.list{
+    margin-top: 20px;
+}
+
+.list h1{
+    transform: translateX(-35px);
+}
+
+
+.btn{
+    margin-top: 20px;
+    border: none;
+    background: #E95E24;
+    color: #fff;
+
+    width: 140px;
+    height: 35px;
+    border-radius: .4rem;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+/* Mapa */
+
+.map{
+    margin-top: 50px;
+    width: 100%;
+}
+.map iframe{
+    width: 100%;
+}
+
+
+.taxi-now{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
