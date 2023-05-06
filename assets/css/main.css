@@ -672,3 +672,28 @@ taxi-section - Home
         gap: 5px;
     }
 }
+
+
+
+.gallery{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    justify-content: center;
+}
+
+.gallery-item{
+    overflow: hidden;
+}
+.gallery-item img{
+    transition: scale .5s;
+}
+.gallery-item:hover img{
+    scale: 1.2;
+}
+
+@media screen and (max-width: 500px) {
+    .gallery{
+        grid-template-columns: repeat(auto-fill, 90%);
+    }
+}
