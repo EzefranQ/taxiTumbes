@@ -718,13 +718,13 @@ taxi-section - Home
     background: #feba12;
     width: 40%;
     height: 80%;
-    border-radius: 50% 0% 0% 90%;
+    border-radius: 50% 0% 0% 80%;
 }
 
 .comm-img{
-    width: 550px;
-    height: 300px;
-    transform: translate(-200px, 30px);
+    width: 650px;
+    height: 280px;
+    transform: translate(-150px, 40px);
     z-index: 1;
 }
 
